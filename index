@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Wedding Registry</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+background:#fdfaf7;
+font-family:'Montserrat', sans-serif;
+color:#444;
+}
+
+/* HERO */
+
+.hero{
+height:100vh;
+background-image:url("WhatsApp Image 2026-03-06 at 13.14.44 (2).jpeg")
+background-position:center;
+display:flex;
+align-items:center;
+justify-content:center;
+position:relative;
+}
+
+.hero::before{
+content:"";
+position:absolute;
+top:0;
+left:0;
+right:0;
+bottom:0;
+background:rgba(0,0,0,0.35);
+}
+
+.hero-content{
+position:relative;
+text-align:center;
+color:white;
+max-width:650px;
+padding:40px;
+}
+
+/* Names */
+
+.names{
+font-family:'Cormorant Garamond', serif;
+font-size:60px;
+letter-spacing:2px;
+margin-bottom:10px;
+}
+
+/* Date */
+
+.date{
+font-size:18px;
+letter-spacing:3px;
+margin-bottom:30px;
+}
+
+/* Message */
+
+.message{
+font-size:17px;
+line-height:1.7;
+margin-bottom:40px;
+}
+
+/* Button */
+
+.btn{
+padding:16px 40px;
+background:#c6a37a;
+color:white;
+text-decoration:none;
+border-radius:50px;
+font-size:15px;
+letter-spacing:1px;
+transition:all 0.3s ease;
+}
+
+.btn:hover{
+background:#b28c63;
+transform:translateY(-2px);
+}
+
+/* Section */
+
+.section{
+padding:80px 20px;
+text-align:center;
+max-width:700px;
+margin:auto;
+}
+
+.section h2{
+font-family:'Cormorant Garamond', serif;
+font-size:40px;
+margin-bottom:20px;
+}
+
+/* Footer */
+
+footer{
+text-align:center;
+padding:40px;
+font-size:14px;
+color:#888;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<section class="hero">
+
+<div class="hero-content">
+
+<div class="names">
+Emma & Daniel
+</div>
+
+<div class="date">
+SEPTEMBER 12, 2026
+</div>
+
+<p class="message">
+Your love and support mean the world to us.  
+If you'd like to celebrate with a gift, we've created a registry to help us start this new chapter together.
+</p>
+
+<a href="REGISTRY_LINK_HERE" class="btn">
+View Gift Registry
+</a>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<h2>Thank You</h2>
+
+<p>
+We are incredibly grateful to celebrate our wedding with the people we love most.  
+Your presence is the greatest gift of all.
+</p>
+
+</section>
+
+<footer>
+With love, Luaretta & Daniel
+</footer>
+
+</body>
+</html>
