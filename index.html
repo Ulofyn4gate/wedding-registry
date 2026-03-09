@@ -17,16 +17,37 @@ box-sizing:border-box;
 }
 
 body{
-background:#fdfaf7;
+background:#e8d1ae;
 font-family:'Montserrat', sans-serif;
-color:#444;
+color:#333;
+}
+
+/* Slideshow */
+
+.slideshow{
+position:relative;
+width:100%;
+max-width:900px;
+margin:auto;
+overflow:hidden;
+border-radius:10px;
+}
+
+.slide{
+width:100%;
+display:none;
+}
+
+.slide.active{
+display:block;
 }
 
 /* HERO */
 
 .hero{
 height:100vh;
-background-image:url("WhatsApp Image 2026-03-06 at 13.14.44 (2).jpeg")
+background-image:url("WhatsApp Image 2026-03-06 at 13.14.44 (2).jpeg");
+background-size:cover;
 background-position:center;
 display:flex;
 align-items:center;
@@ -88,6 +109,7 @@ border-radius:50px;
 font-size:15px;
 letter-spacing:1px;
 transition:all 0.3s ease;
+margin:10px;
 }
 
 .btn:hover{
@@ -110,8 +132,6 @@ font-size:40px;
 margin-bottom:20px;
 }
 
-/* Footer */
-
 footer{
 text-align:center;
 padding:40px;
@@ -125,25 +145,38 @@ color:#888;
 
 <body>
 
+<!-- Slideshow -->
+
+<div class="slideshow">
+<img class="slide active" src="photo1.jpg">
+<img class="slide" src="photo2.jpg">
+<img class="slide" src="photo3.jpg">
+<img class="slide" src="photo4.jpg">
+</div>
+
 <section class="hero">
 
 <div class="hero-content">
 
 <div class="names">
-Emma & Daniel
+Lauretta & TBK
 </div>
 
 <div class="date">
-SEPTEMBER 12, 2026
+APRIL 26, 2026
 </div>
 
 <p class="message">
-Your love and support mean the world to us.  
+Your love and support mean the world to us.
 If you'd like to celebrate with a gift, we've created a registry to help us start this new chapter together.
 </p>
 
 <a href="REGISTRY_LINK_HERE" class="btn">
 View Gift Registry
+</a>
+
+<a href="REGISTRY_LINK_HERE" class="btn">
+Cash Registry
 </a>
 
 </div>
@@ -155,15 +188,38 @@ View Gift Registry
 <h2>Thank You</h2>
 
 <p>
-We are incredibly grateful to celebrate our wedding with the people we love most.  
+We are incredibly grateful to celebrate our wedding with the people we love most.
 Your presence is the greatest gift of all.
 </p>
 
 </section>
 
 <footer>
-With love, Luaretta & Daniel
+With love, Lauretta & TBK
 </footer>
+
+<script>
+
+let slides = document.querySelectorAll(".slide");
+let currentSlide = 0;
+
+function showSlide(){
+
+slides.forEach(slide => slide.classList.remove("active"));
+
+currentSlide++;
+
+if(currentSlide >= slides.length){
+currentSlide = 0;
+}
+
+slides[currentSlide].classList.add("active");
+
+}
+
+setInterval(showSlide, 3500);
+
+</script>
 
 </body>
 </html>
